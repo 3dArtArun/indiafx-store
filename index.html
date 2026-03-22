@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IndiaFx Store — Handcrafted Indian Art & Decor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-inner">
+            <span class="announcement-icon">⚡</span>
+            <span class="announcement-text">HANDCRAFTED SALE: <strong>Up to 60% OFF</strong> — Ends in</span>
+            <div class="countdown" id="countdown">
+                <div class="countdown-block"><span id="hours">06</span><small>HRS</small></div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-block"><span id="minutes">45</span><small>MIN</small></div>
+                <div class="countdown-sep">:</div>
+                <div class="countdown-block"><span id="seconds">22</span><small>SEC</small></div>
+            </div>
+            <span class="announcement-badge">FREE SHIPPING ₹500+</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <a href="/" class="logo">
+                    <span class="logo-india">India</span><span class="logo-fx">Fx</span>
+                    <span class="logo-sub">by MediaFx</span>
+                </a>
+            </div>
+            <nav class="nav" id="mainNav">
+                <a href="#" class="nav-link active" data-category="All">All</a>
+                <a href="#" class="nav-link" data-category="Etikoppaka">Etikoppaka</a>
+                <a href="#" class="nav-link" data-category="Kondapalli">Kondapalli</a>
+                <a href="#" class="nav-link" data-category="Brass & Decor">Brass & Decor</a>
+                <a href="#" class="nav-link" data-category="Home & Kitchen">Home & Kitchen</a>
+                <a href="#" class="nav-link" data-category="Bags & Accessories">Bags</a>
+                <a href="#" class="nav-link nav-link-hot" data-category="Festival">
+                    Festival
+                    <span class="hot-badge">HOT</span>
+                </a>
+            </nav>
+            <div class="header-right">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+                <button class="icon-btn wishlist-btn" aria-label="Wishlist">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span class="badge">0</span>
+                </button>
+                <button class="icon-btn cart-btn" id="cartBtn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="badge cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search handcrafted products..." id="searchInput">
+            <button class="search-close" id="searchClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="search-trending">
+                <p class="search-trending-title">Trending Searches</p>
+                <div class="search-tags">
+                    <span class="search-tag">Etikoppaka Toys</span>
+                    <span class="search-tag">Kondapalli</span>
+                    <span class="search-tag">Brass Diya</span>
+                    <span class="search-tag">Kalamkari Bags</span>
+                    <span class="search-tag">Home Decor</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🇮🇳 HANDCRAFTED IN INDIA</div>
+            <h1 class="hero-title">Authentic <span class="hero-highlight">Indian</span> Handicrafts</h1>
+            <p class="hero-subtitle">Discover 95+ handcrafted masterpieces — from Etikoppaka wooden art to Kondapalli toys, Pembarthy brass & Kalamkari textiles. Every piece tells a story.</p>
+            <div class="hero-stats">
+                <div class="hero-stat"><strong>95+</strong><span>Products</span></div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat"><strong>10K+</strong><span>Happy Customers</span></div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat"><strong>4.8★</strong><span>Avg Rating</span></div>
+            </div>
+            <div class="hero-cta">
+                <a href="#products" class="btn btn-primary btn-lg">Shop Now — Up to 60% OFF</a>
+                <a href="#" class="btn btn-outline btn-lg">View Bestsellers</a>
+            </div>
+        </div>
+        <div class="hero-images">
+            <img src="https://static.wixstatic.com/media/115547_350f0a6cb983421b85da54e03e62dcb3~mv2.jpg/v1/fill/w_400,h_400,q_90,enc_avif,quality_auto/115547_350f0a6cb983421b85da54e03e62dcb3~mv2.jpg" alt="Buttabomma" class="hero-img hero-img-1" loading="eager">
+            <img src="https://static.wixstatic.com/media/115547_d50a29dba8814abdb4a87a57e0e51182~mv2.jpg/v1/fill/w_400,h_400,q_90,enc_avif,quality_auto/115547_d50a29dba8814abdb4a87a57e0e51182~mv2.jpg" alt="Kondapalli Peacock" class="hero-img hero-img-2" loading="eager">
+            <img src="https://static.wixstatic.com/media/115547_50037b8ee849492383e2b903247b532f~mv2.jpg/v1/fill/w_400,h_400,q_90,enc_avif,quality_auto/115547_50037b8ee849492383e2b903247b532f~mv2.jpg" alt="Brass Diya" class="hero-img hero-img-3" loading="eager">
+        </div>
+    </section>
+
+    <!-- Social Proof Bar -->
+    <div class="social-proof-bar">
+        <div class="social-proof-inner">
+            <div class="proof-item">
+                <div class="proof-avatars">
+                    <div class="proof-avatar" style="background:#e17055;">R</div>
+                    <div class="proof-avatar" style="background:#6c5ce7;">S</div>
+                    <div class="proof-avatar" style="background:#00b894;">A</div>
+                    <div class="proof-avatar" style="background:#fd79a8;">P</div>
+                </div>
+                <span><strong>84 people</strong> purchased in the last 24 hours</span>
+            </div>
+            <div class="proof-item">
+                <span class="proof-live"></span>
+                <span><strong id="liveViewers">37 people</strong> viewing right now</span>
+            </div>
+            <div class="proof-item">
+                <span>⭐⭐⭐⭐⭐</span>
+                <span><strong>2,140 reviews</strong> — "Beautiful craftsmanship!"</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content" id="products">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Filters</h3>
+                <button class="clear-filters" id="clearFilters">Clear All</button>
+            </div>
+
+            <div class="filter-group">
+                <h4 class="filter-title">Category</h4>
+                <div class="filter-options">
+                    <label class="filter-option"><input type="checkbox" value="All" checked><span class="checkmark"></span>All Products <span class="filter-count">(95)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Etikoppaka"><span class="checkmark"></span>Etikoppaka <span class="filter-count">(28)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Kondapalli"><span class="checkmark"></span>Kondapalli <span class="filter-count">(8)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Brass & Decor"><span class="checkmark"></span>Brass & Decor <span class="filter-count">(12)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Home & Kitchen"><span class="checkmark"></span>Home & Kitchen <span class="filter-count">(15)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Bags & Accessories"><span class="checkmark"></span>Bags & Accessories <span class="filter-count">(10)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Kalamkari"><span class="checkmark"></span>Kalamkari <span class="filter-count">(6)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Festival"><span class="checkmark"></span>Festival & Decor <span class="filter-count">(9)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Clothing"><span class="checkmark"></span>Clothing & Shirts <span class="filter-count">(4)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="Stationery"><span class="checkmark"></span>Stationery <span class="filter-count">(3)</span></label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4 class="filter-title">Price Range</h4>
+                <div class="filter-options">
+                    <div class="price-range">
+                        <input type="range" min="50" max="21999" value="21999" class="range-slider" id="priceRange">
+                        <div class="price-labels"><span>₹50</span><span id="priceValue">₹21,999</span></div>
+                    </div>
+                    <label class="filter-option"><input type="checkbox" value="under500"><span class="checkmark"></span>Under ₹500 <span class="filter-count">(18)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="500to1000"><span class="checkmark"></span>₹500 – ₹1,000 <span class="filter-count">(32)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="1000to3000"><span class="checkmark"></span>₹1,000 – ₹3,000 <span class="filter-count">(28)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="above3000"><span class="checkmark"></span>₹3,000+ <span class="filter-count">(17)</span></label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h4 class="filter-title">Rating</h4>
+                <div class="filter-options">
+                    <label class="filter-option"><input type="checkbox" value="5"><span class="checkmark"></span>⭐⭐⭐⭐⭐ <span class="filter-count">(64)</span></label>
+                    <label class="filter-option"><input type="checkbox" value="4"><span class="checkmark"></span>⭐⭐⭐⭐ & up <span class="filter-count">(82)</span></label>
+                </div>
+            </div>
+
+            <div class="sidebar-cta">
+                <div class="sidebar-cta-badge">EXCLUSIVE</div>
+                <h4>First Order? Get 15% OFF</h4>
+                <p>Join 10,000+ happy customers</p>
+                <button class="btn btn-primary btn-sm btn-full">Claim Offer</button>
+            </div>
+        </aside>
+
+        <!-- Product Section -->
+        <section class="product-section">
+            <div class="toolbar">
+                <div class="toolbar-left">
+                    <button class="filter-toggle" id="filterToggle">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
+                        Filters
+                    </button>
+                    <p class="results-count">Showing <strong>1–20</strong> of <strong>95</strong> results</p>
+                </div>
+                <div class="toolbar-right">
+                    <div class="view-toggle">
+                        <button class="view-btn active" data-view="grid" aria-label="Grid view">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </button>
+                        <button class="view-btn" data-view="list" aria-label="List view">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                        </button>
+                    </div>
+                    <select class="sort-select" id="sortSelect">
+                        <option value="popular">Most Popular</option>
+                        <option value="newest">Newest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="discount">Biggest Discount</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-grid" id="productGrid">
+                <!-- Products are rendered by JS -->
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-outline btn-lg load-more-btn" id="loadMore">
+                    Load More Products <span class="load-more-count">(Showing 20 of 95)</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-inner">
+            <div class="newsletter-content">
+                <h2>Join 10,000+ Art Lovers</h2>
+                <p>Get exclusive deals on handcrafted Indian art. <strong>Plus 15% OFF your first order!</strong></p>
+            </div>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+                <button type="submit" class="btn btn-primary">Get 15% OFF</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-inner">
+            <div class="trust-item">
+                <div class="trust-icon">🚚</div>
+                <h4>Free Shipping</h4>
+                <p>On orders above ₹500</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🇮🇳</div>
+                <h4>Made in India</h4>
+                <p>100% authentic handicrafts</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">🔒</div>
+                <h4>Secure Payment</h4>
+                <p>UPI, Cards, Net Banking</p>
+            </div>
+            <div class="trust-item">
+                <div class="trust-icon">💯</div>
+                <h4>Quality Guaranteed</h4>
+                <p>Handcrafted with love</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews-section">
+        <div class="reviews-inner">
+            <div class="reviews-header">
+                <h2>What Our Customers Say</h2>
+                <div class="reviews-summary">
+                    <div class="reviews-big-rating">4.8</div>
+                    <div><div class="stars-big">⭐⭐⭐⭐⭐</div><p>Based on 2,140 reviews</p></div>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The Etikoppaka Buttabomma is absolutely gorgeous! The craftsmanship is incredible and the colors are so vibrant. My home feels more traditional now."</p>
+                    <div class="review-author"><div class="review-avatar" style="background:#e17055;">P</div><div><strong>Priya K.</strong><span class="verified">✓ Verified Buyer</span></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Ordered the Kondapalli Peacock Set for Diwali gifts. Everyone loved them! Authentic handcrafted quality. Will order again for sure."</p>
+                    <div class="review-author"><div class="review-avatar" style="background:#6c5ce7;">R</div><div><strong>Rahul M.</strong><span class="verified">✓ Verified Buyer</span></div></div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"The Brass Om Diya set is divine! Perfect for pooja. The packaging was excellent and delivery was super fast. Highly recommend IndiaFx!"</p>
+                    <div class="review-author"><div class="review-avatar" style="background:#00b894;">S</div><div><strong>Sneha R.</strong><span class="verified">✓ Verified Buyer</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="/" class="logo footer-logo"><span class="logo-india">India</span><span class="logo-fx">Fx</span></a>
+                    <p class="footer-tagline">by MediaFx — #1 Indian Handicrafts Store</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">IG</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">FB</a>
+                        <a href="#" class="social-link">YT</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Shop</h4>
+                        <a href="#">All Products</a><a href="#">Etikoppaka</a><a href="#">Kondapalli</a>
+                        <a href="#">Brass & Decor</a><a href="#">Home & Kitchen</a><a href="#">Bags</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About Us</a><a href="#">Our Artisans</a><a href="#">Blog</a><a href="#">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Support</h4>
+                        <a href="#">Help Center</a><a href="#">Shipping Info</a><a href="#">Returns</a><a href="#">Track Order</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 MediaFx. All rights reserved.</p>
+                <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+                <div class="payment-methods">
+                    <span class="payment-icon">UPI</span>
+                    <span class="payment-icon">VISA</span>
+                    <span class="payment-icon">MC</span>
+                    <span class="payment-icon">RuPay</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <h3>Your Cart <span class="cart-item-count" id="cartItemCount">(0 items)</span></h3>
+            <button class="cart-close" id="cartClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+        <div class="cart-drawer-body" id="cartBody">
+            <div class="cart-empty"><span class="cart-empty-icon">🛒</span><p>Your cart is empty</p><a href="#products" class="btn btn-primary btn-sm">Start Shopping</a></div>
+        </div>
+        <div class="cart-drawer-footer" id="cartFooter" style="display:none;">
+            <div class="cart-free-shipping">
+                <div class="shipping-progress"><div class="shipping-progress-bar" id="shippingBar" style="width:0%"></div></div>
+                <p id="shippingMsg">Add <strong>₹500</strong> more for FREE shipping!</p>
+            </div>
+            <div class="cart-total"><span>Subtotal:</span><strong id="cartTotal">₹0</strong></div>
+            <button class="btn btn-primary btn-lg btn-full checkout-btn">Checkout — Secure Payment 🔒</button>
+            <p class="cart-guarantee">7-Day Easy Returns | 100% Authentic</p>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <div class="toast-content">
+            <span class="toast-icon">✓</span>
+            <span class="toast-text" id="toastText">Added to cart!</span>
+        </div>
+    </div>
+
+    <!-- Scroll Top -->
+    <div class="floating-actions">
+        <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
